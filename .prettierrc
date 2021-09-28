@@ -1,0 +1,8 @@
+{
+  "printWidth": 100,
+  "plugins": [
+    "./node_modules/prettier-plugin-organize-imports",
+    "./node_modules/prettier-plugin-jsdoc"
+  ],
+  "jsdocPrintWidth": 10000
+}
