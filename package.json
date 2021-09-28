@@ -1,10 +1,11 @@
 {
   "name": "construct3",
   "version": "1.0.0",
-  "description": "Typings for construct 3",
+  "description": "TypeScript Definitions for Construct 3's Scripting API",
   "main": "index.js",
   "types": "construct3.d.ts",
   "author": "dave caruso <dave@davecode.me>",
+  "license": "SEE LICENSE IN ./LICENSE",
   "scripts": {
     "lint": "prettier --write ."
   },
@@ -13,5 +14,10 @@
     "prettier-plugin-jsdoc": "^0.3.24",
     "prettier-plugin-organize-imports": "^2.3.4",
     "typescript": "^4.4.3"
+  },
+  "homepage": "https://github.com/davecaruso/construct3-types.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davecaruso/construct3-types.git"
   }
 }
