@@ -103,21 +103,21 @@ export class IRuntime {
   /** A shorthand reference to the [Mouse script interface](https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/plugin-interfaces/mouse). This is only set if the Mouse plugin is added to the project. */
   readonly mouse: keyof ObjectTypes extends never
     ? IMouseObjectType | undefined
-    : ObjectTypes[keyof ObjectTypes] extends IMouseObjectType
-    ? IMouseObjectType
-    : undefined;
+    : Extract<ObjectTypes[keyof ObjectTypes], IMouseObjectType> extends never
+    ? undefined
+    : IMouseObjectType;
   /** A shorthand reference to the [Keyboard script interface](https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/plugin-interfaces/keyboard). This is only set if the Keyboard plugin is added to the project. */
   readonly keyboard: keyof ObjectTypes extends never
     ? IKeyboardObjectType | undefined
-    : ObjectTypes[keyof ObjectTypes] extends IKeyboardObjectType
-    ? IKeyboardObjectType
-    : undefined;
+    : Extract<ObjectTypes[keyof ObjectTypes], IKeyboardObjectType> extends never
+    ? undefined
+    : IKeyboardObjectType;
   /** A shorthand reference to the [Touch script interface](https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/plugin-interfaces/touch). This is only set if the Touch plugin is added to the project. */
   readonly touch: keyof ObjectTypes extends never
     ? ITouchObjectType | undefined
-    : ObjectTypes[keyof ObjectTypes] extends ITouchObjectType
-    ? ITouchObjectType
-    : undefined;
+    : Extract<ObjectTypes[keyof ObjectTypes], ITouchObjectType> extends never
+    ? undefined
+    : ITouchObjectType;
   /** An [ILayout interface](https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/layout-interfaces/ilayout) representing the current layout. */
   readonly layout: ILayout;
   /** Get an [ILayout interface](https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/layout-interfaces/ilayout) for a layout in the project, by a case-insensitive string of its name or its zero-based index in the project. */
