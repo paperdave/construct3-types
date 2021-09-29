@@ -10,7 +10,7 @@ import { IRuntime } from "./IRuntime";
  *
  * Behavior instances are typically accessed via the `behaviors` property of [IInstance](https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/iinstance), followed by the name of the behavior. Some example code is shown below.
  */
-export class IBehaviorInstance<I extends IInstance = IInstance, B extends IBehavior = IBehavior> {
+export class IBehaviorInstance<I extends IInstance = IInstance> {
   /** Adds an event handler for a particular type of event fired by an addon's script interface. For information on which events are fired by specific addons, see the documentation on each addon's script interfaces. */
   addEventListener(event: string, cb: (event: C3Event) => void, capture?: boolean): void;
   /** Removes an event handler for a particular type of event fired by an addon's script interface. For information on which events are fired by specific addons, see the documentation on each addon's script interfaces. */
@@ -27,7 +27,7 @@ export class IBehaviorInstance<I extends IInstance = IInstance, B extends IBehav
   /** A reference to the [IInstance](https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/iinstance) representing the object instance this behavior instance is affecting. */
   readonly instance: I;
   /** A reference to the [IBehavior](https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/ibehavior) representing the kind of behavior, e.g. Solid or Physics. */
-  readonly behavior: B;
+  readonly behavior: IBehavior;
   /** A reference back to the [IRuntime interface](https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/iruntime). */
   readonly runtime: IRuntime;
 }
