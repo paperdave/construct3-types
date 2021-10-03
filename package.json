@@ -1,6 +1,6 @@
 {
   "name": "construct3",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TypeScript Definitions for Construct 3's Scripting API",
   "main": "index.js",
   "types": "construct3.d.ts",
