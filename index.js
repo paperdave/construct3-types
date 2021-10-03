@@ -1,7 +1,7 @@
 if (window.C3) {
   module.exports = {
-    ...window,
-    C3Event: window.C3.Event,
+    ...self,
+    C3Event: self.C3.Event,
   };
 } else {
   throw new Error(
